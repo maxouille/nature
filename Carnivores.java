@@ -10,6 +10,13 @@ public class Carnivores extends Animals {
 		super(health, strength, moving, positionX, positionY, see, 2);
 	}
 	
+	/**
+	 * @return the type
+	 */
+	public int getType() {
+		return type;
+	}
+	
 	@Override
 	public int eat() {
 		// TODO 

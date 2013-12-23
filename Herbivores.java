@@ -11,6 +11,13 @@ public class Herbivores extends Animals {
 		super(health, strength, moving, positionX, positionY, see, 1);
 	}
 	
+	/**
+	 * @return the type
+	 */
+	public int getType() {
+		return type;
+	}
+	
 	@Override
 	public int eat() {
 		/** have to search the closest plant around and move closest to her */
