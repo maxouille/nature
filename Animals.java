@@ -42,6 +42,7 @@ public abstract class Animals {
 		this.positionX = positionX;
 		this.positionY = positionY;
 		this.see = see;
+		System.out.println("setMatrix");
 		Earth.setMatrix(positionX, positionY, type);
 	}
 	

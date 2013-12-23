@@ -16,6 +16,10 @@ public class Earth {
 		return matrix;
 	}
 	
+	public static int getValueMatrix(int x, int y) {
+		return matrix[x][y];
+	}
+	
 	public static int[][] setMatrix(int x, int y, int type) {
 		matrix[x][y] = type;
 		 return matrix;

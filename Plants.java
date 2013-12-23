@@ -3,14 +3,19 @@ package nature;
 public class Plants {
 
 	private int health;
+	private int positionX;
+	private int positionY;
 	private int type = 3;
 	
 	/**
 	 * @param health
 	 */
-	public Plants(int health) {
+	public Plants(int health, int x, int y) {
 		super();
 		this.health = health;
+		this.positionX = x;
+		this.positionY = y;
+		Earth.setMatrix(x, y, type);
 	}
 
 	/**
@@ -35,10 +40,31 @@ public class Plants {
 	}
 
 	/**
-	 * @param type the type to set
+	 * @return the positionX
 	 */
-	public void setType(int type) {
-		this.type = type;
+	public int getPositionX() {
+		return positionX;
+	}
+
+	/**
+	 * @param positionX the positionX to set
+	 */
+	public void setPositionX(int positionX) {
+		this.positionX = positionX;
+	}
+
+	/**
+	 * @return the positionY
+	 */
+	public int getPositionY() {
+		return positionY;
+	}
+
+	/**
+	 * @param positionY the positionY to set
+	 */
+	public void setPositionY(int positionY) {
+		this.positionY = positionY;
 	}
 
 	public void update_health (int new_val) {
