@@ -1,6 +1,5 @@
 package nature;
 
-
 public class Plants {
 
 	private int health;

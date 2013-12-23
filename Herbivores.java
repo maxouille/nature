@@ -1,6 +1,5 @@
 package nature;
 
-
 public class Herbivores extends Animals {
 
 	
@@ -46,7 +45,7 @@ public class Herbivores extends Animals {
 	 * @return new position of this
 	 */
 	public int[] move_closest_plant (int[] position_plant) {
-		//TODO déplacement aléatoire 
+		//TODO déplacement aléatoire
 		/** get the maximum value of moving */
 		int max_moving = getMoving();
 		int myX = getPositionX();
@@ -75,13 +74,26 @@ public class Herbivores extends Animals {
 		int new_X = 0;
 		int new_Y = 0;
 		/** check if moveX+moveY <= max_moving */
-		if (moveX+moveY > max_moving) {
-			if (moveX > max_moving) {
-				moveX = max_moving;
+		if (Math.abs(moveX+moveY) > max_moving) {
+			if (Math.abs(moveX) > max_moving) {
+				if (moveX < 0) {
+					moveX = -max_moving;
+				}
+				else {
+					moveX = max_moving;
+				}
 				moveY = 0;
 			}
-			else {
-				moveY = max_moving - moveX;
+			else if (Math.abs(moveX) == max_moving) {
+				moveY = 0;
+			}
+			else if (Math.abs(moveX) < max_moving) {
+				if (moveY < 0) {
+					moveY = -max_moving - moveX;
+				}
+				else {
+					moveY = max_moving - moveX;
+				}
 			}
 		}
 		/** random moving */

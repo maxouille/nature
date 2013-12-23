@@ -3,7 +3,7 @@ package nature;
 public class Earth {
 	
 	private static int autohealth = 1;
-	private static int matrix[][];
+	private static int[][] matrix = new int[201][201];
 	
 	/**
 	 * @return the autohealth
@@ -16,9 +16,9 @@ public class Earth {
 		return matrix;
 	}
 	
-	public static int[][] setMatrix(int x, int y, int animal_type) {
-		matrix[x][y] = animal_type;
-		return matrix;
+	public static int[][] setMatrix(int x, int y, int type) {
+		matrix[x][y] = type;
+		 return matrix;
 	}
 
 }

@@ -1,6 +1,5 @@
 package nature;
 
-
 public class Carnivores extends Animals {
 
 	public Carnivores() {
