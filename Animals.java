@@ -138,8 +138,8 @@ public abstract class Animals {
 	/**
 	 * @return the Type
 	 */
-	public int getType() {
-		return type;
+	public int getType( int x, int y) {
+		return Earth.getValueMatrix(x, y);
 	}
 
 	/**
