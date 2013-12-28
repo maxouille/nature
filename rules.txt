@@ -1,0 +1,25 @@
+-------------------------------------
+règles de la biosphère :
+-------------------------------------
+
+1) La map est un plan séparé en “cellules” ou “cases”. Chaque entité se trouvera sur une case et une case ne pourra être occupée que par une entité au plus.
+
+2) Une entité possède un type qui est soit “plante”, soit “herbivore” soit “carnivore”.
+
+3) Chaque entité possède une race qui est une étiquette définissant son comportement et certaines de ses caractéristiques.
+
+4) Les entités ont une réserve de nourriture qui diminue à chaque tour de jeu. Cette réserve possède un maximum défini par la race de l’entité.
+Cette réserve est décrémentée (d’une quantité définie par la race de l’entité) à la fin du tour. Si elle tombe à 0 ou moins, l’entité est détruite.
+
+5) Chaque race possède une valeur nutritive qui correspond à une quantité de nourriture qui est ajoutée à l’entité qui mange une entité de cette race.
+
+6) Les carnivores mangent les herbivores et les herbivores mangent les plantes. Les plantes se comportent comme si elles mangeaient à chaque tour.
+
+7) pour manger, l’entité doit se déplacer sur la case de sa proie : celle-ci est alors détruite et l’entité gagne la valeur nutritive de la proie en nourriture.
+
+8) les herbivores et les carnivores se déplacent une fois par tour. Les déplacements possibles sont décrits par la race de l’entité. Les plantes ne se déplacent pas.
+
+9) Une entité ne peut pas sortir de la map en se déplaçant.
+
+10) A chaque fois qu’elle se nourrit, une entité a une chance de se reproduire en créant une entité identique à elle-même sur une case voisine inoccupée (diagonales permises). Cette chance de reproduction est indiquée par la race de l’entité.
+
